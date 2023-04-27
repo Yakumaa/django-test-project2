@@ -60,5 +60,13 @@ class ReviewViewSet(ModelViewSet):
 
 
 class CartViewSet(CreateModelMixin, GenericViewSet):
-    queryset = Cart.objects.all()
+    queryset = Cart.objects.prefetch_related('items__product').all()
     serializer_class = CartSerializer
+
+    def retrieve(self, request, pk=None):
+        try:
+            cart = Cart.objects.get(id=pk)
+        except Cart.DoesNotExist:
+            return Response({'error': 'Cart not found.'}, status=404)
+        serializer = self.get_serializer(cart)
+        return Response(serializer.data)
