@@ -5,7 +5,7 @@ from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.pagination import PageNumberPagination
-from rest_framework.permissions import IsAdminUser
+from rest_framework.permissions import IsAdminUser, DjangoModelPermissions
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet, GenericViewSet
 from rest_framework.mixins import (
@@ -16,7 +16,7 @@ from rest_framework.mixins import (
 )
 from rest_framework import status
 from store.pagination import DefaultPagination
-from store.permissions import IsAdminOrReadOnly
+from store.permissions import FullDjangoModelPermissions, IsAdminOrReadOnly
 from .filters import ProductFilter
 from .models import Cart, CartItem, Customer, Product, Collection, Review
 from .serializers import (
@@ -117,12 +117,7 @@ class CartItemViewSet(ModelViewSet):
 class CustomerViewSet(ModelViewSet):
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
-    permission_classes = [IsAdminUser]
-
-    def get_permissions(self):
-        if self.request.method == "GET":
-            return [AllowAny()]
-        return [IsAuthenticated()]
+    permission_classes = [FullDjangoModelPermissions]
 
     @action(detail=False, methods=["GET", "PUT"], permission_classes=[IsAuthenticated])
     def me(self, request):
