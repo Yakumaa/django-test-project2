@@ -7,6 +7,16 @@ name = "pypi"
 django = "*"
 django-debug-toolbar = "*"
 mysqlclient = "*"
+django-filter = "*"
+django-cors-headers = "*"
+djangorestframework = "*"
+djoser = "*"
+django-crispy-forms = "*"
+django-crispy-bootstrap = "*"
+crispy-bootstrap4 = "*"
+drf-nested-routers = "*"
+pillow = "*"
+celery = "*"
 
 [dev-packages]
 
