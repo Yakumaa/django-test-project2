@@ -17,8 +17,9 @@ crispy-bootstrap4 = "*"
 drf-nested-routers = "*"
 pillow = "*"
 celery = "*"
+redis = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.9"
+python_version = "3.9.16"
