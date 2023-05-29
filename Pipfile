@@ -18,8 +18,9 @@ drf-nested-routers = "*"
 pillow = "*"
 celery = "*"
 redis = "*"
+flower = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.9.16"
+python_version = "3.9"
