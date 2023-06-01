@@ -19,6 +19,7 @@ pillow = "*"
 celery = "*"
 redis = "*"
 flower = "*"
+django-redis = "*"
 
 [dev-packages]
 pytest = "*"
