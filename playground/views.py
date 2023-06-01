@@ -2,5 +2,5 @@ from django.shortcuts import render
 import requests
 
 def say_hello(request):
-    requests.get('https://httpbin.org/delay/2')
+    requests.get('https://httpbin.org/delay/2', verify=False)
     return render(request, "hello.html", {"name": "Mosh"})
