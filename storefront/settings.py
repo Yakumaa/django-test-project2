@@ -68,8 +68,8 @@ MIDDLEWARE = [
     
 ]
 
-if DEBUG:
-    MIDDLEWARE += ['silk.middleware.SilkyMiddleware']
+# if DEBUG:
+#     MIDDLEWARE += ['silk.middleware.SilkyMiddleware']
 
 INTERNAL_IPS = [
     # ...
@@ -110,6 +110,9 @@ DATABASES = {
         "HOST": "127.0.0.1",
         "USER": "root",
         "PASSWORD": "1234",
+        'OPTIONS': {
+           "init_command": "SET GLOBAL max_connections = 100000",
+    }
     }
 }
 
