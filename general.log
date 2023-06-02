@@ -1,1 +1,8 @@
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Calling httpbin
+Recieved the response
+/home/shrish/storefront/storefront/settings.py changed, reloading.
+2023-06-02 08:54:11,375 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-02 08:54:13,425 (INFO) - playground.views - Calling httpbin
+2023-06-02 08:54:21,615 (INFO) - playground.views - Recieved the response
