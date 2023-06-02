@@ -6,3 +6,13 @@ Recieved the response
 2023-06-02 08:54:11,375 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
 2023-06-02 08:54:13,425 (INFO) - playground.views - Calling httpbin
 2023-06-02 08:54:21,615 (INFO) - playground.views - Recieved the response
+2023-06-02 10:23:54,006 (INFO) - django.utils.autoreload - /home/shrish/storefront/manage.py changed, reloading.
+2023-06-02 10:24:51,296 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-02 10:25:23,466 (WARNING) - django.request - Unauthorized: /store/collections/
+2023-06-02 10:25:23,471 (WARNING) - django.request - Forbidden: /store/collections/
+2023-06-02 10:25:23,477 (WARNING) - django.request - Bad Request: /store/collections/
+2023-06-02 10:26:34,880 (INFO) - django.utils.autoreload - /home/shrish/storefront/storefront/settings/common.py changed, reloading.
+2023-06-02 10:26:35,389 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-02 10:26:42,423 (WARNING) - django.request - Unauthorized: /store/collections/
+2023-06-02 10:26:42,442 (WARNING) - django.request - Forbidden: /store/collections/
+2023-06-02 10:26:42,461 (WARNING) - django.request - Bad Request: /store/collections/
